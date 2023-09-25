@@ -1,11 +1,18 @@
 <img src="https://github.com/victorfisac/rPBR/blob/master/src/icon/rpbr.png">
 
-# rPBR
+# mix_rPBR
+
 _Created by Víctor Fisac [www.victorfisac.com]_
 
-rPBR is a 3D model viewer with a physically based rendering (PBR) pipeline written in pure C. The PBR pipeline is written directly using OpenGL and the viewer uses raylib programming library for windows management, inputs and interface drawing.
+Updated by Varomix [www.mixtrn.com]
 
-The viewer uses a High Dynamic Range (HDR) file to load and create an environment: cubemap, prefilter reflection map, irradiance map (global illumination) and brdf map. By the other hand, physically based rendering materials are created to store model textures: albedo, tangent space normals, metallic, roughness, ambient occlusion, emission and parallax.
+rPBR is a 3D model viewer with a physically based rendering (PBR) pipeline written in pure C. The PBR pipeline is
+written directly using OpenGL and the viewer uses raylib programming library for windows management, inputs and
+interface drawing.
+
+The viewer uses a High Dynamic Range (HDR) file to load and create an environment: cubemap, prefilter reflection map,
+irradiance map (global illumination) and brdf map. By the other hand, physically based rendering materials are created
+to store model textures: albedo, tangent space normals, metallic, roughness, ambient occlusion, emission and parallax.
 
 The header contains a few customizable define values. I set the values that gived me the best results.
 
@@ -27,31 +34,34 @@ The header contains a few customizable define values. I set the values that give
 #define         BRDF_SIZE                   512                 // BRDF LUT texture map size
 ```
 
-_Note: paths to environment and physically based rendering shaders are defined in pbrcore.h. Check the paths if your program doesn't load shaders properly._
+_Note: paths to environment and physically based rendering shaders are defined in pbrcore.h. Check the paths if your
+program doesn't load shaders properly._
 
 Installation
 -----
 
-rPBR requires raylib and raygui submodules. To add them to the repository we need to use the following commands using Git Shell:
+rPBR requires raylib and raygui submodules. To add them to the repository we need to use the following commands using
+Git Shell:
 
     * cd src/external/raylib
     * git submodule update --init --recursive
     * cd ../raygui
     * git submodule update --init --recursive
 
-It will install the raylib and raygui submodules. Ensure to be in master branch in each submodule to work with a stable version.
+It will install the raylib and raygui submodules. Ensure to be in master branch in each submodule to work with a stable
+version.
 
 Dependencies
 -----
 
 rPBR requires the following C libraries to work:
 
-   *  [raylib.h](https://github.com/raysan5/raylib)     - raylib framework for window management and inputs.
-   *  [raygui.h](https://github.com/raysan5/raygui)     - raylib user interface drawing functions.
-   *  [math.h](https://github.com/Alexpux/mingw-w64/blob/master/mingw-w64-headers/crt/math.h)       - Math operations functions [powf()].
-   *  [stb_image.h](https://github.com/nothings/stb/blob/master/stb_image.h)  - Image loading [Sean Barret].
-   *  [glad.h](https://github.com/glfw/glfw/blob/master/deps/glad/glad.h)       - OpenGL API [3.3 Core profile].
-
+* [raylib.h](https://github.com/raysan5/raylib)     - raylib framework for window management and inputs.
+* [raygui.h](https://github.com/raysan5/raygui)     - raylib user interface drawing functions.
+* [math.h](https://github.com/Alexpux/mingw-w64/blob/master/mingw-w64-headers/crt/math.h)       - Math operations
+  functions [powf()].
+* [stb_image.h](https://github.com/nothings/stb/blob/master/stb_image.h)  - Image loading [Sean Barret].
+* [glad.h](https://github.com/glfw/glfw/blob/master/deps/glad/glad.h)       - OpenGL API [3.3 Core profile].
 
 Screenshots
 -----
@@ -66,5 +76,5 @@ Screenshots
 Credits
 -----
 
-   * [Victor Fisac](http://www.victorfisac.com) - Main rPBR developer
-   * [Ramón Santamaria](http://www.raylib.com) - Support designing and developing rPBR
+* [Victor Fisac](http://www.victorfisac.com) - Main rPBR developer
+* [Ramón Santamaria](http://www.raylib.com) - Support designing and developing rPBR
